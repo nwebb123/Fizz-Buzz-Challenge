@@ -4,8 +4,6 @@ document.getElementById("btnLetsFindOut").addEventListener("click", function () 
     let value1 = parseInt(document.getElementById("FizzValue").value);       //parseInt grabs the number out of the parameter and drop anything that's not a number
     let value2 = parseInt(document.getElementById("BuzzValue").value);
 
-    console.log('hello!');
-
     document.getElementById("results").innerHTML = FizzBuzzA(value1, value2);
 
 })
