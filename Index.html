@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Coder Foundry MiniSite Template</title>
+
+   
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Solve.html">Solve</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Code.html">Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Git</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1 class="mt-5">The Title of the Exercise</h1>
+                <p class="lead">You can customize the template colors</p>
+                <ul class="list-unstyled">
+                    <li>This page is for a description of the Javascript exercise</li>
+                    <li>You should include information about what the code does</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Content-->
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-lg-2">
+                <p>Entry 1: </p>
+            </div>
+            <div class="col-lg-2">
+                <input id="FizzValue" />
+            </div>
+            <div class="col-lg-2">
+                <p>Entry 2: </p>
+            </div>
+            <div class="col-lg-2">
+                <input id="BuzzValue" />
+            </div>
+            <!--This is the button-->
+            <div class="col-3">
+                <button type="button" on-click="true" id="btnLetsFindOut" class="btn btn-primary btn-lg">Let's Find Out!</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p id="results"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+    <!--Custom Files-->
+    <!--Link to my Javascript File-->
+    <script src="script.js"></script>
+
+
+
+    <!--Example from this morning-->
+    <!--<script>
+        //Wire up an event handler for the click event of btnFizzBuzz
+        document.getElementById("btnFizzBuzz").addEventListener("click", function () {
+            //Step 1 Get User data if there is any
+
+            let fizz = document.getElementById("txtFizzBuzzIn1").value;
+            //let fizz = parseInt(document.getElementById("txtFizzBuzzIn1").value);
+            let fizz = Number(document.getelementbyid("txtfizzbuzzin1").value); //3
+            let buzz = Number(document.getelementbyid("txtfizzbuzzin2").value); //5
+
+
+
+
+
+            //Step 2: Run the user data through the named function
+            let output = DoFizzBuzzFoundation(fizz, buzz);
+
+
+
+
+
+            //Step 3: Output the results of the FizzBuzz named function
+            document.getElementById("pFizzBuzzOut").innerHTML = output;
+
+
+
+        })
+
+        //Algo Placeholder (named function)
+        function DoFizzBuzzFoundation(fizz, buzz) {
+            let output = ""; //This gives the output a blank string
+
+
+
+            for (let loop = 1; loop <= 100; loop++) {
+                let fizzRemainder = loop % fizz;
+                let buzzRemainder = loop % buzz;
+
+
+             //Some calculation that looks at fizz and buzz to see if they are 0
+                //if fizzRemainder == 0 I dont print the loop instead I print "fizz"
+                //if buzzRemainder == 0, I dont print the loop I print "buzz"
+                //if both fizzRemainder and buzzRemainder == 0 i print "FizzBuzz"
+
+
+                if (fizzRemainder == 0 && buzzRemainder == 0) {
+                    output += `F`
+                }
+                //output += loop
+                output += `loop value: ${loop} <br /> FR: ${loop} % ${fizz} = ${fizzRemainder} <br /> BR: ${loop} %,`;
+            }
+
+            return output;
+
+        }
+
+        1 % 3 == 1
+        2 % 3 == 2
+        3 % 3 == 0
+        4 % 3 == 1
+        5 % 3 == 2
+        6 % 3 == 0
+
+
+
+
+    </script>-->
+    <!--My attempt at Fizz Buzz-->
+    <!--<script>
+        document.getElementById("btnFizzBuzz").addEventListener("click", function () {
+
+            //We leave this blank on purpose
+            let output = ""
+
+            for (var i = 1; i <= 100; i++) {
+                if (i % 3 == 0) {
+                    output += ("Fizz");
+                }
+
+                if (i % 5 == 0) {
+                    output += ("Buzz");
+                }
+
+                if ((i % 3 != 0) && (i % 5 != 0)) {
+                    output += (i)
+                }
+
+
+
+            }
+
+            document.getElementById("outputFizzBuzz").innerHTML = output;
+
+
+
+        })
+
+
+
+    </script>-->
+
+
+
+
+
+
+</body>
+
+</html>
