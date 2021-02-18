@@ -13,7 +13,7 @@ document.getElementById("btnLetsFindOut").addEventListener("click", function () 
 
 function FizzBuzzA(value1, value2) {       //This function is going to return a string so it needs a variable.
     let returnValue = "";       //variable is equal to an empty string. 
-    for (let i = 1; i <= 100; i++) {      //Need to create a "for" loop(aka:i). (let i=1; makes it start at zero, then i<=100;i++ tells it to stop once it is less than or equal to 100. but everytime it loops, it adds one to i (i++)
+    for (let i = 1; i <= 100; i++) {      //Need to create a "for" loop. let i=1; starts the loop at zero, then i<=100; tells it to stop once it is less than or equal to 100. i++ increments the loop by 1 each iteration.
         if (i % value1 == 0 && i % value2 == 0) {                       //Use modulus operator to determine if number is divisible by 3 or 5. (or entry1 entry2). == does not assign a value to something, but compares the values and return true or false. && means "and also". It 
             returnValue += 'FizzBuzz  ';    //We're doing this in a loop, so += (incrementally) will add one iteration of itself (1) until it reaches it's parameters (<=100). if both of those == 0, then the string 'FizzBuzz ' is returned
         }
